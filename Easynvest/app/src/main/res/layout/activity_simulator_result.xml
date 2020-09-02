@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:text="@string/simulation_result_title"
+            android:gravity="center"
+            android:textColor="@color/GREY_666666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gross_amount"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_title"
+            android:layout_marginTop="6dp"
+            android:layout_width="0dp"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:textColor="@color/BLACK_000000"
+            android:hint="@string/simulation_result_placeholder"
+            android:textSize="30sp"
+            tools:text="R$ 1.088,69"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_gross_amount_profit"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@id/tv_gross_amount"
+            app:layout_constraintEnd_toEndOf="@id/tv_gross_amount"
+            android:layout_width="0dp"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_gross_amount_profit"
+            android:gravity="center"
+            android:textColor="@color/GREY_ACACAC"
+            app:layout_constraintTop_toBottomOf="@id/tv_gross_amount" />
+
+        <TextView
+            android:id="@+id/tv_invested_amount_detail_label"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_gross_amount_profit"
+            app:layout_constraintEnd_toStartOf="@+id/tv_invested_amount_detail_value"
+            android:layout_width="0dp"
+            android:fontFamily="@font/din_pro_light"
+            android:textColor="@color/GREY_7B7B7B"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_invested_amount_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_gross_amount_profit" />
+
+        <TextView
+            android:id="@+id/tv_invested_amount_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gross_amount_profit"
+            app:layout_constraintStart_toEndOf="@+id/tv_invested_amount_detail_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:textColor="@color/BLACK_000000"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_invested_amount_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_invested_amount_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_gross_amount_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_invested_amount_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_gross_amount_detail_value"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_gross_amount_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_invested_amount_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_gross_amount_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_invested_amount_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_gross_amount_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_gross_amount_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_gross_amount_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_gross_amount_profit_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_gross_amount_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_gross_amount_profit_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_gross_amount_profit_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_gross_amount_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_gross_amount_profit_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_gross_amount_profit_detail_label"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gross_amount_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_gross_amount_profit_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_gross_amount_profit_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_taxes_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_gross_amount_profit_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_taxes_detail_value"
+            android:layout_width="0dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/din_pro_light"
+            android:textColor="@color/GREY_7B7B7B"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_taxes_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_gross_amount_profit_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_taxes_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gross_amount_profit_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_taxes_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_taxes_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_taxes_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_net_amount_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_taxes_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_net_amount_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_net_amount_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_taxes_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_net_amount_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_taxes_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_net_amount_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_net_amount_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_net_amount_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_maturity_date_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_net_amount_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_maturity_date_detail_value"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:layout_width="0dp"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_maturity_date_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_net_amount_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_maturity_date_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_net_amount_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_maturity_date_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_maturity_date_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_maturity_date_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_maturity_total_date_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_maturity_date_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_maturity_total_date_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_maturity_total_date_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_maturity_date_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_maturity_total_date_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_maturity_date_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_maturity_total_date_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_maturity_total_date_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_maturity_total_date_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_monthly_gross_rate_profit_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_maturity_total_date_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_monthly_gross_rate_profit_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_monthly_gross_rate_profit_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_maturity_total_date_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_monthly_gross_rate_profit_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_maturity_total_date_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_monthly_gross_rate_profit_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_monthly_gross_rate_profit_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_monthly_gross_rate_profit_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_rate_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_monthly_gross_rate_profit_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rate_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_rate_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_monthly_gross_rate_profit_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_rate_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_monthly_gross_rate_profit_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_rate_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_rate_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_rate_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_yearly_interest_rate_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_rate_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_yearly_interest_rate_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_yearly_interest_rate_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_rate_detail_label" />
+
+        <TextView
+            android:id="@+id/tv_yearly_interest_rate_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rate_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_yearly_interest_rate_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_height="wrap_content"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_yearly_interest_rate_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_yearly_interest_rate_detail_label"/>
+
+        <TextView
+            android:id="@+id/tv_annual_gross_rate_profit_detail_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_yearly_interest_rate_detail_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_annual_gross_rate_profit_detail_value"
+            android:layout_width="0dp"
+            android:textColor="@color/GREY_7B7B7B"
+            android:fontFamily="@font/din_pro_light"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_result_annual_gross_rate_profit_detail_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_yearly_interest_rate_detail_value" />
+
+        <TextView
+            android:id="@+id/tv_annual_gross_rate_profit_detail_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_yearly_interest_rate_detail_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_annual_gross_rate_profit_detail_label"
+            android:layout_width="0dp"
+            android:textColor="@color/BLACK_000000"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_pro_light"
+            android:hint="@string/simulation_result_placeholder"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tv_annual_gross_rate_profit_detail_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_annual_gross_rate_profit_detail_label"/>
+
+        <Button
+            android:id="@+id/btn_simulate_again"
+            style="@style/ButtonDefault"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/simulation_result_btn_simulate_again"
+            android:fontFamily="@font/din_pro_light"
+            app:layout_constraintTop_toBottomOf="@id/tv_annual_gross_rate_profit_detail_value"
+            app:layout_constraintStart_toStartOf="@id/tv_annual_gross_rate_profit_detail_label"
+            app:layout_constraintEnd_toEndOf="@id/tv_annual_gross_rate_profit_detail_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

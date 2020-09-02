@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Easynvest</string>
+
+    <string name="simulation_result_title">Resultado da simulação</string>
+    <string name="simulation_result_placeholder">-</string>
+    <string name="simulation_result_gross_amount_profit">Rendimento total de\u0020</string>
+    <string name="simulation_result_invested_amount_detail_label">Valor aplicado inicialmente</string>
+    <string name="simulation_result_gross_amount_detail_label">Valor bruto do investimento</string>
+    <string name="simulation_result_gross_amount_profit_detail_label">Valor do rendimento</string>
+    <string name="simulation_result_taxes_detail_value">%1$s (%2$s)</string>
+    <string name="simulation_result_taxes_detail_label">IR sobre o investimento</string>
+    <string name="simulation_result_net_amount_detail_label">Valor líquido do investimento</string>
+    <string name="simulation_result_maturity_date_detail_label">Data de resgate</string>
+    <string name="simulation_result_maturity_total_date_detail_label">Dias corridos</string>
+    <string name="simulation_result_monthly_gross_rate_profit_detail_label">Rendimento mensal</string>
+    <string name="simulation_result_rate_detail_label">Percentual do CDI do investimento</string>
+    <string name="simulation_result_yearly_interest_rate_detail_label">Rentabilidade anual</string>
+    <string name="simulation_result_annual_gross_rate_profit_detail_label">Rentabilidade no período</string>
+    <string name="simulation_result_btn_simulate_again">Simular novamente</string>
+    <string name="simulation_form_invested_amount_label">Quanto você gostaria de aplicar? *</string>
+    <string name="simulation_form_placeholder_invested_amount">R$</string>
+    <string name="simulation_form_maturity_date_label">Qual a data de vencimento do investimento? *</string>
+    <string name="simulation_form_placeholder_maturity_date">dia/mês/ano</string>
+    <string name="simulation_form_rate_label">Qual o percentual do CDI do investimento? *</string>
+    <string name="simulation_form_placeholder_rate">100%</string>
+    <string name="simulation_form_btn_to_simulate">Simular</string>
+</resources>
