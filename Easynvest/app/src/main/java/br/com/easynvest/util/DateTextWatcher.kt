@@ -8,10 +8,10 @@ class DateTextWatcher(private var editText: EditText, private var mMask: String)
 
     private var isUpdating: Boolean = false
     private var mOldString = ""
-    private var befores = ""
+    private var before = ""
 
     override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-        befores = s.toString().removeSpecialCharacterInNumber()
+        before = s.toString().removeSpecialCharacterInNumber()
     }
 
     override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
@@ -21,10 +21,10 @@ class DateTextWatcher(private var editText: EditText, private var mMask: String)
             return
         }
 
-        if (before == 1 && befores.isNotEmpty() && !isUpdating) {
-            val last = befores.substring(befores.length, befores.length)
+        if (before == 1 && this.before.isNotEmpty() && !isUpdating) {
+            val last = this.before.substring(this.before.length, this.before.length)
             if (last.isEmpty()) {
-                str = str.substring(0, befores.length - 1)
+                str = str.substring(0, this.before.length - 1)
             }
         }
 
