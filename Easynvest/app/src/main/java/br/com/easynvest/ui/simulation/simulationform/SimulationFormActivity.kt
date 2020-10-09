@@ -57,6 +57,7 @@ class SimulationFormActivity : AppCompatActivity() {
     }
 
     private fun initView() {
+        btnToSimulate = findViewById(R.id.btn_to_simulate)
         btnToSimulate.setOnClickListener {
             toSimulate()
         }
